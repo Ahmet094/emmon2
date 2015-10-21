@@ -1,0 +1,54 @@
+
+body{
+background-color:black;
+height: 100%;
+margin:0 auto;
+}
+
+#header{
+	background:linear-gradient(gray, black);
+	height:7%;
+	width:100%;
+	border-bottom: 2px solid lightgray;
+}
+
+#eintrag{
+background:linear-gradient(gray, black);
+border-radius: 8px;
+border: 1px solid lightgray;
+width:90%;
+padding:3px;
+margin:0 auto;
+}
+
+#begin{
+background:linear-gradient(green, darkgreen);
+width:10%;
+height:7%;
+border-radius: 8px;
+border: 1px solid lightgray;
+float:left;
+}
+
+#end{
+background:linear-gradient(red, darkred);
+width:10%;
+height:7%;
+border-radius: 8px;
+border: 1px solid lightgray;
+margin-left: 11%;
+}
+
+#pipe{
+background-color:lightgray;
+border-radius:2px;
+height:7%;
+width: 0.17%;
+}
+
+#main{
+margin:0 auto;
+}
+
+#footer{
+}
