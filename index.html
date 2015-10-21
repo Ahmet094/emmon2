@@ -1,0 +1,91 @@
+  <head>
+<link rel="stylesheet" href="style.css">
+
+
+<script type="text/javascript">
+window.onload = timer;
+
+function timer() {
+    var xmlDoc=new ActiveXObject("MSXML.DOMDocument");
+    xmlDoc.async="false";
+    xmlDoc.load("welcome.xml");
+    var entries = xmlDoc.documentElement;
+    var entry = entries.childNodes(0);
+    var numPro = entries.childNodes.length; 
+
+    for(var i=0; i<numPro; i++){
+        for(var j=0; j<100000;j++){j+=18; j-=18; for(var z=0;z<5000;z++){}} 
+        show(i);
+    }
+}
+
+function show(num) {
+    var xmlDoc=new ActiveXObject("MSXML.DOMDocument");
+    xmlDoc.async="false";
+    xmlDoc.load("welcome.xml");
+
+    var entries = xmlDoc.documentElement;
+    var entry = entries.childNodes(num);
+    var attr = entry.childNodes.length;
+	document.getElementById(main).innerHTML =  entry.childNodes.length;
+    for(var i=0;i<attr;i++){
+        var txt = xmlDoc.getElementsByTagName("entry")[0].childNodes[i].nodeValue;
+        txt = txt + "<br />";
+        var idPos;
+        if(i==1) { idPos = "begin"; }
+        else
+        if(i==2) { idPos = "end"; }
+        else
+        if(i==3) { idPos = "subject"; }
+        else
+        if(i==4) { idPos = "chair"; }
+
+        document.getElementById(idPos).innerHTML = txt;
+    }
+}
+
+</script>
+</head>
+
+
+
+<body onload="timer()">
+
+<div id="header">
+</div>
+<br />
+<div id="main">
+	<div id="eintrag">	
+		<div id="begin"></div>	
+		<div id="end">
+			<div id="pipe"></div>
+		</div>
+	</div>
+	<br />
+	<div id="eintrag">	
+		<div id="begin"></div>	
+		<div id="end">
+			<div id="pipe"></div>
+		</div>
+	</div>	
+	<br />
+	<div id="eintrag">	
+		<div id="begin"></div>	
+		<div id="end">
+			<div id="pipe"></div>
+		</div>
+	</div>		
+		
+	<div id="1begin"></div>
+	<div id="1end"> </div>
+	<div id="1subject"> </div>
+	<div id="1chair"> </div>
+</div>
+
+
+
+
+<div id="footer">
+</div>
+
+</body>
